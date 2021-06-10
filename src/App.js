@@ -1,25 +1,61 @@
-import logo from './logo.svg';
 import './App.css';
+import './styles/output.css'
+import { BrowserRouter, Route, Switch} from 'react-router-dom'
+import { ItemListContainer} from './components/ItemListContainer/ItemListContainer';
+import { Navbar } from './components/NavBar/NavBar';
+import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
+import { ItemsInCart } from './context/CartContext';
+import Cart from './components/Cart/Cart';
+import CheckoutContainer from './components/CheckoutContainer/CheckoutContainer';
+import { Favorites } from './context/FavsContext';
+import WishlistContainer from './components/WishlistContainer/WishlistContainer';
+import User from './components/User/User';
+import NotFounded from './components/NotFounded/NotFounded';
+import ProtectRoute from './components/ProtectRoute/ProtectRoute';
+import 'firebase/firestore';
+import 'firebase/auth';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <BrowserRouter>
+      <div className="bg-white h-auto">
+        <ItemsInCart>
+        <Favorites>
+          <Navbar/>
+            <Switch>
+              <Route exact path="/user">
+                <ProtectRoute>
+                  <User />
+                </ProtectRoute>
+              </Route>
+              <Route exact path="/">
+                <ItemListContainer />
+              </Route>
+              <Route exact path="/category/:id">
+                <ItemListContainer/>
+              </Route>
+              <Route exact path="/item/:id">
+                <ItemDetailContainer/>
+              </Route>
+              <Route exact path="/checkout">
+                <ProtectRoute>
+                  <CheckoutContainer/>
+                </ProtectRoute>
+              </Route>
+              <Route exact path="/cart">
+                <Cart/>
+              </Route>
+              <Route exact path="/wishlist">
+                <WishlistContainer/>
+              </Route>
+              <Route exact path="*">
+                <NotFounded title={"Página no encontrada"}/>
+              </Route>
+            </Switch>
+        </Favorites>
+        </ItemsInCart>  
+      </div>
+    </BrowserRouter>
+  )};
 
 export default App;
