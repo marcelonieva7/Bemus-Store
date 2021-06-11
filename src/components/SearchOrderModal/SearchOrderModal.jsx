@@ -1,7 +1,7 @@
 import React from "react"
 import Skeleton from "react-loading-skeleton";
 import { animated } from "react-spring"
-import { currencyFormat } from "../../currencyFormat";
+import { currencyFormat } from "../../utils/currencyFormat";
 
 const SearchOrderModal = ({ style, closeModal, status, order, orderId }) => (
     <animated.div style={style} className="bg-gray-100 w-screen h-screen absolute inset-0">
@@ -9,8 +9,7 @@ const SearchOrderModal = ({ style, closeModal, status, order, orderId }) => (
     {status === 'loading' ?
         <Skeleton height={30}/>
         :((orderId !== 'undefined' && !order.total) ? <span>Orden inexistente</span>
-            :
-            <div className="flex flex-col max-w-3xl md:max-w-full p-3 space-y-4 sm:p-5 bg-coolGray-50 text-coolGray-800">
+            :<div className="flex flex-col max-w-3xl md:max-w-full p-3 space-y-4 sm:p-5 bg-coolGray-50 text-coolGray-800">
                 <h2 className="text-xl font-semibold">{`Orden ${order.NO_ID_FIELD}`}</h2>
                 <ul className="flex flex-col divide-y divide-coolGray-300">
                 {order.items.map(item=> (

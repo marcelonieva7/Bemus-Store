@@ -7,7 +7,7 @@ import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetail
 import { ItemsInCart } from './context/CartContext';
 import Cart from './components/Cart/Cart';
 import CheckoutContainer from './components/CheckoutContainer/CheckoutContainer';
-import { Favorites } from './context/FavsContext';
+import { Wishlist } from './context/WishlistContext' ;
 import WishlistContainer from './components/WishlistContainer/WishlistContainer';
 import User from './components/User/User';
 import NotFounded from './components/NotFounded/NotFounded';
@@ -20,7 +20,7 @@ function App() {
     <BrowserRouter>
       <div className="bg-white h-auto">
         <ItemsInCart>
-        <Favorites>
+        <Wishlist>
           <Navbar/>
             <Switch>
               <Route exact path="/user">
@@ -52,7 +52,7 @@ function App() {
                 <NotFounded title={"Página no encontrada"}/>
               </Route>
             </Switch>
-        </Favorites>
+        </Wishlist>
         </ItemsInCart>  
       </div>
     </BrowserRouter>

@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { FavsContext } from "../../context/FavsContext";
+import { WishlistContext } from "../../context/WishlistContext";
 
 const FavsWidget = ({id}) => {    
-    const [, isInFavs, addFav, removeFav] = useContext(FavsContext)
+    const [, isInFavs, addFav, removeFav] = useContext(WishlistContext)
     return (
         <button  onClick={()=>{isInFavs(id) ? removeFav(id) :addFav(id)}} className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 mb-2">
             <svg fill={isInFavs(id) ? "purple" : "currentColor"} strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-5 h-5" viewBox="0 0 24 24">

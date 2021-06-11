@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { useTransition } from "react-spring";
 import { CartContext } from '../../context/CartContext';
-import {currencyFormat} from '../../currencyFormat';
-import ItemCart from "../ItemCart";
+import {currencyFormat} from '../../utils/currencyFormat';
+import ItemCart from "../ItemCart/ItemCart";
 
 const Cart = () => {
     const [,,addedItems, clear, removeItem, totalAmount] = useContext(CartContext)

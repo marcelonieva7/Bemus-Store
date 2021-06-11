@@ -3,7 +3,7 @@ import Skeleton from 'react-loading-skeleton';
 import { ItemCount } from '../ItemCount/ItemCount';
 import { CartContext } from '../../context/CartContext';
 import { Link } from "react-router-dom";
-import { currencyFormat } from '../../currencyFormat';
+import { currencyFormat } from '../../utils/currencyFormat';
 import FavsWidget from '../FavsWidget/FavsWidget';
 import { useTransition } from 'react-spring';
 import BuyModal from '../BuyModal/BuyModal'

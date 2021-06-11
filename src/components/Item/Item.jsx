@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ItemCount } from '../ItemCount/ItemCount';
 import { CartContext } from '../../context/CartContext';
 import Skeleton from 'react-loading-skeleton';
-import { currencyFormat } from '../../currencyFormat';
+import { currencyFormat } from '../../utils/currencyFormat';
 import FavsWidget from '../FavsWidget/FavsWidget';
 import { animated, useTransition } from 'react-spring';
 import BuyModal from '../BuyModal/BuyModal';

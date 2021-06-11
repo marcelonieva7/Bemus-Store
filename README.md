@@ -47,15 +47,18 @@ Link https://bemus-store.vercel.app/
   
 ## Screenshots
 
-![App Screenshot](https://res.cloudinary.com/dafygowzm/image/upload/v1619907151/Antimo%20screens/antimo_00_jyktwy.png)
+![App Screenshot](https://res.cloudinary.com/dafygowzm/image/upload/v1623443990/Antimo%20screens/bemus-store.vercel.app__2_cwc6hr.png)
 
-![App Screenshot](https://res.cloudinary.com/dafygowzm/image/upload/v1619907150/Antimo%20screens/antimo_02_g26xsq.png)
+![App Screenshot](https://res.cloudinary.com/dafygowzm/image/upload/v1623443990/Antimo%20screens/bemus-store.vercel.app__3_grjts4.png)
 
-![App Screenshot](https://res.cloudinary.com/dafygowzm/image/upload/v1619907151/Antimo%20screens/antimo_01_btcxkx.png)
+![App Screenshot](https://res.cloudinary.com/dafygowzm/image/upload/v1623443989/Antimo%20screens/bemus-store.vercel.app__4_t6eaid.png)
 
-![App Screenshot](https://res.cloudinary.com/dafygowzm/image/upload/v1619907151/Antimo%20screens/antimo_03_fz944d.png)
+![App Screenshot](https://res.cloudinary.com/dafygowzm/image/upload/v1623443990/Antimo%20screens/bemus-store.vercel.app__5_yomgui.png)
 
-![App Screenshot](https://res.cloudinary.com/dafygowzm/image/upload/v1619907150/Antimo%20screens/antimo_04_bkvxlz.png)
+![App Screenshot](https://res.cloudinary.com/dafygowzm/image/upload/v1623443991/Antimo%20screens/bemus-store.vercel.app__6_joro3a.png)
 
+![App Screenshot](https://res.cloudinary.com/dafygowzm/image/upload/v1623443991/Antimo%20screens/bemus-store.vercel.app__7_lt9hxw.png)
+
+![App Screenshot](https://res.cloudinary.com/dafygowzm/image/upload/v1623443992/Antimo%20screens/bemus-store.vercel.app__8_ahom0z.png)
 
   

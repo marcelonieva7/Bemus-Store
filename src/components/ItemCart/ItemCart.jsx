@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { animated } from "react-spring";
-import { currencyFormat } from "../currencyFormat";
+import { currencyFormat } from "../../utils/currencyFormat";
 
 const ItemCart = ({removeItem, item, style}) => (
     <animated.li style={style} className="flex flex-col py-6 sm:flex-row sm:justify-between">
