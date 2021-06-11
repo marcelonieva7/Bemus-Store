@@ -14,20 +14,28 @@ Link https://bemus-store.vercel.app/
 ## Tecnologías empleadas
 
 - React.js
+
 - React Router Dom
   Librería incorporada al proyecto para el manejo de rutas https://github.com/ReactTraining/react-router
+  
 - Tailwind
   Incluido como framework de css https://github.com/tailwindlabs/tailwindcss
+  
 - React Skeleton Loader
   Utilizado para generar los loaders en la carga de contenido https://github.com/dvtng/react-loading-skeleton
+  
 - React Spring
   Librería añadida al proyecto para la generación de animaciones y transiciones https://github.com/pmndrs/react-spring
+  
 - Firebse 
   Plataforma que brinda la autenticación y base de datos para la aplicacion https://github.com/firebase/
+  
 - ReactFire
   Librería introducida para mejorar la integración con firebase mediante el uso de context y hooks https://github.com/FirebaseExtended/reactfire
+  
 - React firebaseUi
   Provee componentes de interfaz de usuario para la autenticaion con firebase  https://github.com/firebase/firebaseui-web-react
+  
 - React HookForm
   Hooks para el manejo de formularios https://github.com/react-hook-form/react-hook-form
 
