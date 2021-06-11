@@ -21,11 +21,11 @@ export const ItemList = ()=> {
     const itemsQuery = catId ? itemsCollection.where('category', '==', catId) : itemsCollection
     const { status, data: items } = useFirestoreCollectionData(itemsQuery)
 
-    const loader = [{id: "01"},{id: "02"},{id: "03"}]
+    const loader = [{},{},{}]
 
     return (
         status === 'loading'  ?
-            <div>{loader.map((item)=> <Item key={item.id} id={item.id} name={item.fullName} value={item.value} stock={item.stock} img={item.imgLst}/>)}</div>
+            <div>{loader.map((item, idx)=> <Item key={idx} id={idx} name={item.fullName} value={item.value} stock={item.stock} img={item.imgLst}/>)}</div>
             : (items.length ?
                 <div>{items.map((item)=> <Item key={item.NO_ID_FIELD} id={item.NO_ID_FIELD} name={item.fullName} value={item.value} stock={item.stock} img={item.imgLst}/>)}</div>
                 : <NotFounded title={"Categoria no encontrada"}/>

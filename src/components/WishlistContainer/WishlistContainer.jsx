@@ -9,7 +9,7 @@ const WishlistContainer = () => {
     const [isLoading, setIsLoading] = useState(true)
     const [favs] = useContext(FavsContext)
     const db = useFirestore()
-    const loader = [{id: "01"},{id: "02"},{id: "03"}]
+    const loader = [{},{},{}]
 
     const fadingAnimation = useTransition(items, items.map((item, index) => index), { 
         from: { opacity: 0, transform: "translateX(-40px)" }, 
@@ -39,15 +39,13 @@ const WishlistContainer = () => {
     },[favs, db])
     
     return (
-        isLoading  ? <div>{loader.map((item)=> <Item key={item.id} id={item.id} name={item.fullName} value={item.value} stock={item.stock} img={item.imgLst}/>)}</div>
+        isLoading  ? <div>{loader.map((item, idx)=> <Item key={idx} id={idx} name={item.fullName} value={item.value} stock={item.stock} img={item.imgLst}/>)}</div>
         : items.length ? (
-        // <div>{items.map((item)=> <Item key={item.id} id={item.id} name={item.fullName} value={item.value} stock={item.stock} img={item.imgLst}/>)}</div>
         fadingAnimation.map( ({ item, key, props: style }) => <Item style={style} key={key} id={item.id} name={item.fullName} value={item.value} stock={item.stock} img={item.imgLst}/>)
-
         )
-            :<div className="flex flex-col items-center justify-start h-screen pt-40">
-                <h3 className="text-xl font-semibold my-2">Tu lista de favoritos esta vacia</h3>
-            </div>
+        :<div className="flex flex-col items-center justify-start h-screen pt-40">
+            <h3 className="text-xl font-semibold my-2">Tu lista de favoritos esta vacia</h3>
+        </div>
     )
 }
  
