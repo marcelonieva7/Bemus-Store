@@ -20,7 +20,6 @@ ReactDOM.render(
     <FirebaseAppProvider firebaseConfig={firebaseConfig}>
       <App />
     </FirebaseAppProvider>
-
   </React.StrictMode>,
   document.getElementById('root')
 );

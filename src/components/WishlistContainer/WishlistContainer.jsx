@@ -41,10 +41,16 @@ const WishlistContainer = () => {
     
     
     if (isLoading) {
-        return <div>{loader.map((item, idx)=> <Item key={idx} id={idx} name={item.fullName} value={item.value} stock={item.stock} img={item.imgLst}/>)}</div>
+        return (
+            <div>
+                <h1 className="text-xl p-4 text-purple-700">Lista de favoritos</h1>
+                {loader.map((item, idx)=> <Item key={idx} id={idx} name={item.fullName} value={item.value} stock={item.stock} img={item.imgLst}/>)}
+            </div>
+        )
     }
     return (
         <React.Fragment>
+            {!items.length || <h1 className="text-xl p-4 text-purple-700">Lista de favoritos</h1>}
             {fadingAnimation.map( ({ item, key, props: style }) => <Item style={style} key={key} id={item.id} name={item.fullName} value={item.value} stock={item.stock} img={item.imgLst}/>)}
             {!items.length && <div className="container px-3 md:px-16 lg:px-32 py-24 mx-auto text-center">
             <div className="m-4 bg-blue-200 rounded-lg shadow-lg px-3 py-6 flex flex-col items-center justify-center">

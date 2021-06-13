@@ -4,8 +4,9 @@ import { animated } from "react-spring"
 import { currencyFormat } from "../../utils/currencyFormat";
 
 const SearchOrderModal = ({ style, closeModal, status, order, orderId }) => (
-    <animated.div style={style} className="bg-gray-100 w-screen h-screen absolute inset-0">
-    <div className="modal rounded-lg h-auto w-5/6 md:w-1/2 left-[8%] top-[15%] md:left-1/4">
+    <animated.div style={style} className="w-screen h-screen absolute inset-0">
+    <div className="bg-gray-400 opacity-60 h-full w-full"></div>
+    <div className="modal rounded-lg h-auto w-5/6 md:w-1/2 left-[8%] top-[15%] md:left-1/4 p-2">
     {status === 'loading' ?
         <Skeleton height={30}/>
         :((orderId !== 'undefined' && !order.total) ? <span>Orden inexistente</span>
@@ -13,18 +14,14 @@ const SearchOrderModal = ({ style, closeModal, status, order, orderId }) => (
                 <h2 className="text-xl font-semibold">{`Orden ${order.NO_ID_FIELD}`}</h2>
                 <ul className="flex flex-col divide-y divide-coolGray-300">
                 {order.items.map(item=> (
-                    <li key={item.id} className="flex flex-col py-3 sm:flex-row sm:justify-between">
-                        <div className="flex w-full space-x-2 sm:space-x-4">
-                            <div className="flex flex-col justify-between w-full pb-4">
-                                <div className="flex justify-between w-full pb-2 space-x-2">
-                                    <div className="space-y-1">
-                                        <h3 className="text-lg font-semibold leading-snug sm:pr-8">{item.title}</h3>
-                                        <p className="text-sm text-coolGray-600">{`${item.quantity} x ${currencyFormat(item.price)}`}</p>
-                                    </div>
-                                    <div className="text-right">
-                                        <p className="text-lg font-semibold">{currencyFormat(item.price * item.quantity)}</p>
-                                    </div>
-                                </div>
+                    <li key={item.id} className="py-3">
+                        <div className="flex justify-between w-full pb-2 space-x-2">
+                            <div className="space-y-1 text-left">
+                                <h3 className="text-lg font-semibold leading-snug sm:pr-8">{item.title}</h3>
+                                <p className="text-sm text-coolGray-600">{`${item.quantity} x ${currencyFormat(item.price)}`}</p>
+                            </div>
+                            <div className="text-right">
+                                <p className="text-lg font-semibold">{currencyFormat(item.price * item.quantity)}</p>
                             </div>
                         </div>
                     </li>
@@ -38,7 +35,7 @@ const SearchOrderModal = ({ style, closeModal, status, order, orderId }) => (
             </div>
         )
                 }
-    <button className="modal-close-button w-[70%] md:w-[50%] rounded-lg" onClick={closeModal}>
+    <button className="modal-close-button w-[70%] md:w-[50%] rounded-lg mb-2" onClick={closeModal}>
         Cerrar
     </button>
     </div>
