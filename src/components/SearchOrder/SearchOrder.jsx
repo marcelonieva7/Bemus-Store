@@ -22,7 +22,7 @@ const SearchOrder = () => {
     
     const { status, data:order } = useFirestoreDocData(orderRef)
 
-    const trimField = () => value => ((value.trim() !== "" && value.trim().length === 20 ) || `20 caracteres sin espacios`)
+    const trimField = () => value => value.length === 20 || `20 caracteres sin espacios`
     
     const onSubmit = ({order}) => {
         setOrderID(order)
