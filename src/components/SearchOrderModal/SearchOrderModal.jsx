@@ -11,7 +11,7 @@ const SearchOrderModal = ({ style, closeModal, status, order, orderId }) => (
         <Skeleton height={30}/>
         :((orderId !== 'undefined' && !order.total) ? <span>Orden inexistente</span>
             :<div className="flex flex-col max-w-3xl md:max-w-full p-3 space-y-4 sm:p-5 bg-coolGray-50 text-coolGray-800">
-                <h2 className="text-xl font-semibold">{`Orden ${order.NO_ID_FIELD}`}</h2>
+                <h2 className="text-xl font-medium">Orden <span className="font-semibold text-indigo-400">{order.NO_ID_FIELD}</span></h2>
                 <ul className="flex flex-col divide-y divide-coolGray-300">
                 {order.items.map(item=> (
                     <li key={item.id} className="py-3">
