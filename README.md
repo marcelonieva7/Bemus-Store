@@ -27,7 +27,7 @@ Link https://bemus-store.vercel.app/
 - React Spring
   Librería añadida al proyecto para la generación de animaciones y transiciones https://github.com/pmndrs/react-spring
   
-- Firebse 
+- Firebase 
   Plataforma que brinda la autenticación y base de datos para la aplicacion https://github.com/firebase/
   
 - ReactFire

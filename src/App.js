@@ -14,6 +14,7 @@ import NotFounded from './components/NotFounded/NotFounded';
 import ProtectRoute from './components/ProtectRoute/ProtectRoute';
 import 'firebase/firestore';
 import 'firebase/auth';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
                 <NotFounded title={"Página no encontrada"}/>
               </Route>
             </Switch>
+            <Footer/>
         </Wishlist>
         </ItemsInCart>  
       </div>
